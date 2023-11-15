@@ -1,9 +1,41 @@
 body {
+    margin: 0;
+    padding: 0;
     background-color: black;
 }
 
-h1 {
-    font-family: 'Vina Sans', sans-serif;;
-    color: white;
-    text-align: center;
+#animatedElement {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateX(0deg) rotateY(0deg);
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease-out;
+}
+
+.line {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-sizing: border-box;
+}
+
+.line:nth-child(1) {
+    transform: rotateX(45deg) rotateY(45deg);
+}
+
+.line:nth-child(2) {
+    transform: rotateX(-45deg) rotateY(45deg);
+}
+
+.line:nth-child(3) {
+    transform: rotateX(45deg) rotateY(-45deg);
+}
+
+.line:nth-child(4) {
+    transform: rotateX(-45deg) rotateY(-45deg);
 }
